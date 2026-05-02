@@ -1,7 +1,7 @@
 const VideoSection = () => {
   return (
-    <section className="h-[50vh] bg-white text-black">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col w-full lg:flex-row justify-center items-center">
+    <section className="w-full h-[50vh]">
+      <div className="h-full flex flex-col w-full lg:flex-row justify-center items-center">
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
           <h2 className="text-xl">Headline</h2>
           <p>
