@@ -1,10 +1,12 @@
 const VideoSection = () => {
   return (
-    <section className="w-full h-[50vh]">
-      <div className="h-full flex flex-col w-full lg:flex-row justify-center items-center">
-        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <h2 className="text-xl">Headline</h2>
-          <p>
+    <section className="w-full  py-12 px-6 lg:px-24">
+      <div className=" max-w-6xl h-full flex flex-col w-full lg:flex-row justify-center items-center lg:gap-12 mx-auto">
+        <div className="w-full lg:w-2/5 flex flex-col justify-center items-start">
+          <h2 className="text-4xl font-bold mb-4 leading-tight">
+            Catch accessibility risks before they becomes liability.
+          </h2>
+          <p className="text-lg mb-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quam
             optio id magnam assumenda rem quia excepturi dolorum mollitia
             officiis adipisci, quisquam cum provident, ab perferendis, quasi
@@ -14,8 +16,15 @@ const VideoSection = () => {
           </p>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center items-center">
-          <h2 className="text-xl">Video</h2>
+        <div className="w-full lg:w-3/5 flex justify-center items-center p-2">
+          <video
+            src="/videos/access-lens-demo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full"
+          />
         </div>
       </div>
     </section>

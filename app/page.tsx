@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="max-w-6xl mx-auto px-6">
+      <main>
         <Hero />
         <VideoSection />
         <CardsSection />
