@@ -1,17 +1,14 @@
 const CardsSection = () => {
   return (
-    <section className="w-full flex flex-col gap-5 justify-center items-start py-24    ">
+    <section className="w-full flex flex-col gap-5 justify-center items-start py-12 px-6 lg:px-24">
       {/* Intro */}
-      <div className="max-w-6xl">
-        <div className="w-full flex flex-col justify-center items-start gap-3">
           <h2 className="text-4xl font-bold">How it works.</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
             voluptatibus explicabo laboriosam voluptatum tempore porro!
           </p>
-        </div>
         {/* Cards Container */}
-        <div className="w-full flex flex-col lg:flex-row gap-4">
+        <div className="w-full flex flex-col lg:flex-row gap-4 max-w-6xl">
           {/* Card */}
           <div className="w-full lg:w-1/3 flex flex-col justify-start gap-5 border border-gray-200 shadow-md rounded-xl min-h-[200] p-4">
             <div className="w-full flex justify-between">
@@ -52,7 +49,6 @@ const CardsSection = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
