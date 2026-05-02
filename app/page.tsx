@@ -10,12 +10,13 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
+
       <main className="max-w-6xl mx-auto px-6">
-      <VideoSection />
-      <CardsSection />
-      <DownloadSection />
-      <StartSection />
+        <Hero />
+        <VideoSection />
+        <CardsSection />
+        <DownloadSection />
+        <StartSection />
       </main>
       <Footer />
     </>
