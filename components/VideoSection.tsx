@@ -1,8 +1,8 @@
 const VideoSection = () => {
   return (
-    <section className="w-full h-[50vh] py-12 ">
-      <div className=" max-w-6xl h-full flex flex-col w-full lg:flex-row justify-center items-center gap-24 mx-auto">
-        <div className="w-full lg:w-1/3 flex flex-col justify-center items-start">
+    <section className="w-full  py-12 px-6 lg:px-24">
+      <div className=" max-w-6xl h-full flex flex-col w-full lg:flex-row justify-center items-center lg:gap-12 mx-auto">
+        <div className="w-full lg:w-2/5 flex flex-col justify-center items-start">
           <h2 className="text-4xl font-bold mb-4 leading-tight">
             Catch accessibility risks before they becomes liability.
           </h2>
@@ -16,7 +16,7 @@ const VideoSection = () => {
           </p>
         </div>
 
-        <div className="w-full lg:w-2/3 flex justify-center items-center">
+        <div className="w-full lg:w-3/5 flex justify-center items-center p-2">
           <video
             src="/videos/access-lens-demo.mp4"
             autoPlay
