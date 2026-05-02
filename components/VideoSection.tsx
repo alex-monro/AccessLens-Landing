@@ -2,7 +2,7 @@ const VideoSection = () => {
   return (
     <section className="flex flex-col w-full lg:flex-row justify-center items-center h-[50vh] bg-white text-black">
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-start max-w-md">
-        <h2 className="text-xl">Headline</h2>
+        <h2 className="text-2xl">Headline</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quam
           optio id magnam assumenda rem quia excepturi dolorum mollitia officiis
