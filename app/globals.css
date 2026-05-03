@@ -34,7 +34,7 @@
     filter: invert(1);
   }
 
-  /* [required] adds box-shadow to bottom nav border in dark mode */
+  /* [required] adds box-shadow to bottom nav border in dark mode (light mode uses shadow-sm inline) */
   nav {
     box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
   }
