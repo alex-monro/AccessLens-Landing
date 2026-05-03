@@ -25,10 +25,11 @@
     --btn-bg-hover: #e0e0e0;
     --btn-text-hover: #1a1a1a;
     --navbar-border: 0.0625rem solid #3a3a3a;
-    /* [required] adjusts logo color scheme based on light/dark mode */
-    nav img {
-      filter: invert(1);
-    }
+  }
+
+  /* [required] adjusts logo color scheme based on light/dark mode */
+  nav img {
+    filter: invert(1);
   }
 }
 
