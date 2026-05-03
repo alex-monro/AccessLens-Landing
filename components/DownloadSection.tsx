@@ -4,7 +4,7 @@ const DownloadSection = () => {
       <h2 className="text-3xl font-bold">No Free Tool Can Catch Everything.</h2>
       <p>Discover a versatile tool designed to meet the unique needs of any team, improving collaboration and productivity.</p>
 
-      <button>Book an Audit</button>
+      <button className="all-buttons">Book an Audit</button>
     </section>
   );
 };
