@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <section className="h-dvh w-full  flex flex-col items-center justify-center ">
@@ -9,10 +10,14 @@ const Hero = () => {
         into expensive legal exposure.
       </p>
       <div className="flex flex-col flex-row gap-4 pt-8 text-sm md:text-xl">
-      <button className="all-buttons">
-        <p className="text-2xl font-bold">Download AccessLens</p>
-        <span className="text-sm">100% Free | No Purchase Necessary</span>
-      </button>
+        <button className="all-buttons">
+          {/* ArrowRight uses aria-hidden=true bcuz the button itself has descriptive text. so we dont want the SR to read it out, its purely decorative */}
+          <p className="text-2xl font-bold">
+            Download AccessLens
+            <ArrowRight className="inline" aria-hidden="true" />
+          </p>
+          <span className="text-sm">100% Free | No Purchase Necessary</span>
+        </button>
         {/* <button className="all-buttons">
           Book An Audit
         </button> */}
