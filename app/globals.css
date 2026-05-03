@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* light mode settings if browser is set to prefers light mode */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -12,7 +13,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: light) {
+/* dark mode settings if the users browser is set to dark mode by default. */
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
