@@ -6,10 +6,10 @@ const StartSection = () => {
           Start With The Free Tool.
         </h2>
         <div className="flex flex-col lg:flex-row lg:items-end gap-2">
-          <button className="border border-black p-3 rounded-2xl cursor-pointer">
+          <button className="border p-3 rounded-2xl">
             Install Free For Chrome
           </button>
-          <button className="border border-black p-3 rounded-2xl cursor-pointer">
+          <button className="border p-3 rounded-2xl">
             Install Free For Chrome
           </button>
         </div>

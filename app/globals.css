@@ -4,6 +4,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --btn-text: red;
+  --btn-bg: yellow;
 }
 
 @theme inline {
@@ -28,5 +30,11 @@ body {
 }
 
 .btn-black {
-  @apply bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors cursor-pointer;
+  @apply px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors;
+}
+
+button {
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  cursor: pointer;
 }
