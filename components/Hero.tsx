@@ -9,12 +9,13 @@ const Hero = () => {
         into expensive legal exposure.
       </p>
       <div className="flex flex-col flex-row gap-4 pt-8 text-sm md:text-xl">
-        <button className="all-buttons">
-          Install Free for Chrome
-        </button>
-        <button className="all-buttons">
+      <button className="all-buttons">
+        <p className="text-2xl font-bold">Download AccessLens</p>
+        <span className="text-sm">100% Free | No Purchase Necessary</span>
+      </button>
+        {/* <button className="all-buttons">
           Book An Audit
-        </button>
+        </button> */}
       </div>
     </section>
   );

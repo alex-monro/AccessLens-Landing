@@ -7,11 +7,12 @@ const StartSection = () => {
         </h2>
         <div className="flex flex-col lg:flex-row lg:items-end gap-2">
           <button className="all-buttons">
-            Install Free For Chrome
+            <p className="text-2xl font-bold">Download AccessLens</p> 
+            <span className="text-sm">No Purchase Neccessary</span>
           </button>
-          <button className="all-buttons">
+          {/* <button className="all-buttons">
             Install Free For Chrome
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
