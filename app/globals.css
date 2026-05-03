@@ -2,12 +2,12 @@
 
 /* light mode settings if browser is set to prefers light mode */
 :root {
-  --background: #e5e5e5;
+  --background: #fff;
   --foreground: #1a1a1a;
   --btn-border: 0.0625rem solid var(--foreground);
   --btn-bg-hover: #2a2a2a;
   --btn-text-hover: #e5e5e5;
-  --navbar-border: 0.0625rem solid var(--foreground);
+  --alt-sections-bg: #F9FAFB;
 }
 
 @theme inline {
@@ -15,6 +15,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* custom: creates inline class for the variable to make certain sections have light grey bg on light mode and dark bg on dark mode. */
+  --color-alt-sections-bg: var(--alt-sections-bg);
 }
 
 /* dark mode settings if the users browser is set to dark mode by default. */
@@ -24,11 +26,17 @@
     --foreground: #e5e5e5;
     --btn-bg-hover: #e0e0e0;
     --btn-text-hover: #1a1a1a;
-    --navbar-border: 0.0625rem solid #3a3a3a;
-    /* [required] adjusts logo color scheme based on light/dark mode */
-    nav img {
-      filter: invert(1);
-    }
+    --alt-sections-bg: var(--background);
+  }
+
+  /* [required] adjusts logo color scheme based on light/dark mode */
+  nav img {
+    filter: invert(1);
+  }
+
+  /* [required] adds box-shadow to bottom nav border in dark mode */
+  nav {
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -59,4 +67,9 @@ button {
 button:hover {
   background: var(--btn-bg-hover);
   color: var(--btn-text-hover);
+}
+
+/* cards section */
+.card-badge {
+  @apply w-8 h-8 rounded-full flex items-center justify-center bg-foreground text-background inline-flex;
 }
