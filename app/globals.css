@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+/* light mode settings if browser is set to prefers light mode */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e5e5e5;
+  --foreground: #1a1a1a;
+  --btn-border: 0.0625rem solid var(--foreground);
+  --btn-bg-hover: #2a2a2a;
+  --btn-text-hover: #e5e5e5;
+  --navbar-border: 0.0625rem solid var(--foreground);
 }
 
 @theme inline {
@@ -12,10 +17,18 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: light) {
+/* dark mode settings if the users browser is set to dark mode by default. */
+@media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a1a1a;
+    --foreground: #e5e5e5;
+    --btn-bg-hover: #e0e0e0;
+    --btn-text-hover: #1a1a1a;
+    --navbar-border: 0.0625rem solid #3a3a3a;
+    /* [required] adjusts logo color scheme based on light/dark mode */
+    nav img {
+      filter: invert(1);
+    }
   }
 }
 
@@ -25,6 +38,25 @@ body {
   font-family: inter, Arial, Helvetica, sans-serif;
 }
 
-.btn-black {
-  @apply bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors cursor-pointer;
+/* navbar */
+nav {
+  background: var(--background);
+  border-bottom: var(--navbar-border);
+}
+
+/* global button state */
+.all-buttons {
+  @apply p-3 rounded-2xl text-lg font-medium transition-colors;
+}
+
+button {
+  color: var(--foreground);
+  background: var(--background);
+  cursor: pointer;
+  border: var(--btn-border);
+}
+
+button:hover {
+  background: var(--btn-bg-hover);
+  color: var(--btn-text-hover);
 }

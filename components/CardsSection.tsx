@@ -1,6 +1,6 @@
 const CardsSection = () => {
   return (
-    <section className="w-full flex flex-col gap-5 justify-center items-start py-12 px-6 lg:px-24 border-4 border-white-200 min-h-[37.5rem]">
+    <section className="w-full flex flex-col gap-5 justify-center items-start py-12 px-6 lg:px-24 min-h-[37.5rem]">
       {/* Intro */}
           <h2 className="text-4xl font-bold">How it works.</h2>
           <p>
