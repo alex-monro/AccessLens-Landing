@@ -53,7 +53,7 @@ const FAQItem = ({ question, answer, isOpen, isLast, onToggle }: FAQItemProps) =
       </span>
     </button>
     {isOpen && (
-      <p className="pt-3 text-foreground text-base leading-relaxed max-w-2xl">{answer}</p>
+      <p className="pt-3 text-base leading-relaxed max-w-2xl">{answer}</p>
     )}
   </div>
 );
@@ -62,14 +62,14 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-24 px-6 lg:px-24">
+    <section className="section-pad">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-2/5 shrink-0 flex flex-col gap-4">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            <h2 className="section-heading">
               Common<br />questions.
             </h2>
-            <p className="text-foreground text-lg">
+            <p className="text-lg">
               Everything you need to know about the free tool.
             </p>
           </div>
