@@ -1,60 +1,53 @@
 @import "tailwindcss";
 
-/* light mode settings if browser is set to prefers light mode */
 :root {
   --background: #fff;
-  --foreground: #1a1a1a;
-  --btn-border: 0.0625rem solid var(--foreground);
-  --btn-bg-hover: #2a2a2a;
-  --btn-text-hover: #e5e5e5;
+  --foreground: #1a1a2e;
   --alt-sections-bg: #F9FAFB;
+  --accent: #5B5BD6;
+  --btn-border: 0.0625rem solid var(--foreground);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  /* custom: creates inline class for the variable to make certain sections have light grey bg on light mode and dark bg on dark mode. */
   --color-alt-sections-bg: var(--alt-sections-bg);
 }
 
-/* dark mode settings if the users browser is set to dark mode by default. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1a1a;
-    --foreground: #e5e5e5;
-    --btn-bg-hover: #e0e0e0;
-    --btn-text-hover: #1a1a1a;
-    --alt-sections-bg: var(--background);
-  }
-
-  /* [required] adjusts logo color scheme based on light/dark mode */
-  nav img {
-    filter: invert(1);
-  }
-
-  /* [required] adds box-shadow to bottom nav border in dark mode (light mode uses shadow-sm inline) */
-  nav {
-    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
-  }
-}
-
+/* ─── base ───────────────────────────────────────────────── */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: inter, Arial, Helvetica, sans-serif;
 }
 
-/* navbar */
-nav {
-  background: var(--background);
-  border-bottom: var(--navbar-border);
+/* grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
 }
 
-/* global button state */
+/* ─── shared layout ──────────────────────────────────────── */
+.section-pad {
+  @apply w-full py-24 px-6 lg:px-24;
+}
+
+.section-heading {
+  @apply text-4xl lg:text-5xl font-bold leading-tight;
+}
+
+/* ─── buttons ────────────────────────────────────────────── */
 .all-buttons {
-  @apply p-3 rounded-2xl text-lg font-medium transition-colors;
+  @apply rounded-2xl font-medium;
 }
 
 button {
@@ -65,11 +58,34 @@ button {
 }
 
 button:hover {
-  background: var(--btn-bg-hover);
-  color: var(--btn-text-hover);
+  background: #e8e8e8;
 }
 
-/* cards section */
+/* ghost — no bg, no border, no hover */
+.btn-ghost {
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+}
+
+.btn-ghost:hover {
+  background: transparent;
+  color: var(--foreground);
+}
+
+/* accent — blue bg, white text */
+.btn-accent {
+  background: var(--accent);
+  color: var(--background);
+  border-color: var(--accent);
+}
+
+.btn-accent:hover {
+  background: var(--accent);
+  color: var(--background);
+}
+
+/* ─── card badge ─────────────────────────────────────────── */
 .card-badge {
   @apply w-8 h-8 rounded-full flex items-center justify-center bg-foreground text-background inline-flex;
 }

@@ -1,31 +1,47 @@
 const VideoSection = () => {
   return (
-    <section className="w-full flex items-center py-12 px-6 lg:px-24 min-h-48 min-h-[37.5rem] bg-alt-sections-bg">
-      <div className="max-w-6xl h-full flex flex-col w-full lg:flex-row justify-center items-center lg:gap-12 mx-auto">
-        <div className="w-full lg:w-2/5 flex flex-col justify-center items-start">
-          <h2 className="text-4xl font-bold mb-4 leading-tight">
-            Catch accessibility risks before they becomes liability.
+    <section className="section-pad flex items-center min-h-[37.5rem] bg-alt-sections-bg">
+      <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center gap-16 mx-auto">
+
+        <div className="w-full lg:w-2/5 flex flex-col gap-6">
+          <h2 className="section-heading">
+            See what you've been shipping.
           </h2>
-          <p className="text-lg mb-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quam
-            optio id magnam assumenda rem quia excepturi dolorum mollitia
-            officiis adipisci, quisquam cum provident, ab perferendis, quasi
-            molestiae cumque est! Fugiat nobis maiores cupiditate, nostrum
-            libero hic cumque maxime consectetur consequuntur fugit natus
-            commodi quidem cum numquam, et tenetur temporibus?
+          <p className="text-lg leading-relaxed">
+            Most accessibility problems aren't obvious until someone can't use your product.
+            AccessLens surfaces them during development — when they're cheap to fix, not after
+            launch when they're not.
           </p>
+          <ul className="flex flex-col gap-3">
+            {[
+              "Instant scan on any page — no setup",
+              "Issues ranked by severity",
+              "Every finding linked to the exact element",
+              "Code examples included",
+            ].map((point) => (
+              <li key={point} className="flex items-start gap-3">
+                <span className="mt-1 w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0">
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                    <path d="M1 4l2.5 2.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                {point}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <div className="w-full lg:w-3/5 flex justify-center items-center p-2">
+        <div className="w-full lg:w-3/5">
           <video
             src="/videos/access-lens-demo.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="w-full"
+            className="w-full rounded-2xl shadow-2xl"
           />
         </div>
+
       </div>
     </section>
   );
